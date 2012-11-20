@@ -120,7 +120,7 @@ def checkMatch():
 	for i in matches[1]:
 		print ''
 		print ('Do you want to unfollow', i.screen_name,'?')
-		print ('Type "u" to unfollow, "x" to exit, any other to ignore')
+		print ('Press "d" to unfollow, "x" to exit, any other to ignore')
 		answer = raw_input()
 		if answer == 'd':
 			defollow(i)
@@ -197,6 +197,7 @@ def update_status():
             print ("The tweet must be less or equal to 140 characters")
             tweet = raw_input("Insert your tweet: ")
         api.update_status(tweet)
+	print ("Tweet sent")
         return
 
 #Creates a new list
